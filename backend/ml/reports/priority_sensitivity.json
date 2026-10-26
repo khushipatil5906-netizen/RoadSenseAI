@@ -1,0 +1,116 @@
+{
+  "reports_analyzed": 50,
+  "baseline_weights": {
+    "severity": 0.5,
+    "traffic": 0.2,
+    "rainfall": 0.1,
+    "road_importance": 0.2
+  },
+  "calibration_note": "Baseline weights are currently assigned using municipal engineering domain heuristics. In production deployment, weights would be calibrated with civil engineering stakeholders using formal Multi-Criteria Decision Analysis such as the Analytic Hierarchy Process (AHP).",
+  "perturbations": {
+    "severity_+20%": {
+      "factor_perturbed": "severity",
+      "perturbation_percent": "+20%",
+      "renormalized_weights": {
+        "severity": 0.5455,
+        "traffic": 0.1818,
+        "rainfall": 0.0909,
+        "road_importance": 0.1818
+      },
+      "spearman_rank_correlation": 0.9957,
+      "band_change_count": 3,
+      "band_change_percentage": 6.0
+    },
+    "severity_-20%": {
+      "factor_perturbed": "severity",
+      "perturbation_percent": "-20%",
+      "renormalized_weights": {
+        "severity": 0.4444,
+        "traffic": 0.2222,
+        "rainfall": 0.1111,
+        "road_importance": 0.2222
+      },
+      "spearman_rank_correlation": 0.9923,
+      "band_change_count": 6,
+      "band_change_percentage": 12.0
+    },
+    "traffic_+20%": {
+      "factor_perturbed": "traffic",
+      "perturbation_percent": "+20%",
+      "renormalized_weights": {
+        "severity": 0.4808,
+        "traffic": 0.2308,
+        "rainfall": 0.0962,
+        "road_importance": 0.1923
+      },
+      "spearman_rank_correlation": 0.9973,
+      "band_change_count": 4,
+      "band_change_percentage": 8.0
+    },
+    "traffic_-20%": {
+      "factor_perturbed": "traffic",
+      "perturbation_percent": "-20%",
+      "renormalized_weights": {
+        "severity": 0.5208,
+        "traffic": 0.1667,
+        "rainfall": 0.1042,
+        "road_importance": 0.2083
+      },
+      "spearman_rank_correlation": 0.9978,
+      "band_change_count": 1,
+      "band_change_percentage": 2.0
+    },
+    "rainfall_+20%": {
+      "factor_perturbed": "rainfall",
+      "perturbation_percent": "+20%",
+      "renormalized_weights": {
+        "severity": 0.4902,
+        "traffic": 0.1961,
+        "rainfall": 0.1176,
+        "road_importance": 0.1961
+      },
+      "spearman_rank_correlation": 0.9999,
+      "band_change_count": 1,
+      "band_change_percentage": 2.0
+    },
+    "rainfall_-20%": {
+      "factor_perturbed": "rainfall",
+      "perturbation_percent": "-20%",
+      "renormalized_weights": {
+        "severity": 0.5102,
+        "traffic": 0.2041,
+        "rainfall": 0.0816,
+        "road_importance": 0.2041
+      },
+      "spearman_rank_correlation": 0.9995,
+      "band_change_count": 2,
+      "band_change_percentage": 4.0
+    },
+    "road_importance_+20%": {
+      "factor_perturbed": "road_importance",
+      "perturbation_percent": "+20%",
+      "renormalized_weights": {
+        "severity": 0.4808,
+        "traffic": 0.1923,
+        "rainfall": 0.0962,
+        "road_importance": 0.2308
+      },
+      "spearman_rank_correlation": 0.9973,
+      "band_change_count": 4,
+      "band_change_percentage": 8.0
+    },
+    "road_importance_-20%": {
+      "factor_perturbed": "road_importance",
+      "perturbation_percent": "-20%",
+      "renormalized_weights": {
+        "severity": 0.5208,
+        "traffic": 0.2083,
+        "rainfall": 0.1042,
+        "road_importance": 0.1667
+      },
+      "spearman_rank_correlation": 0.9978,
+      "band_change_count": 1,
+      "band_change_percentage": 2.0
+    }
+  }
+}

@@ -1,0 +1,337 @@
+{
+  "Dummy (Most Frequent)": {
+    "cv_accuracy_mean": 0.3531,
+    "cv_accuracy_std": 0.0021,
+    "cv_macro_f1_mean": 0.174,
+    "cv_macro_f1_std": 0.0008,
+    "test_agreement_accuracy": 0.35,
+    "test_macro_f1": 0.1728,
+    "test_weighted_f1": 0.1815,
+    "test_macro_precision": 0.1167,
+    "test_macro_recall": 0.3333,
+    "per_class": {
+      "Low": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 74
+      },
+      "Medium": {
+        "precision": 0.35,
+        "recall": 1.0,
+        "f1": 0.5185,
+        "support": 84
+      },
+      "High": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 82
+      }
+    },
+    "confusion_matrix": [
+      [
+        0,
+        74,
+        0
+      ],
+      [
+        0,
+        84,
+        0
+      ],
+      [
+        0,
+        82,
+        0
+      ]
+    ]
+  },
+  "Rule-Only Baseline": {
+    "cv_accuracy_mean": 0.9771,
+    "cv_accuracy_std": 0.0121,
+    "cv_macro_f1_mean": 0.9772,
+    "cv_macro_f1_std": 0.0121,
+    "test_agreement_accuracy": 0.9875,
+    "test_macro_f1": 0.9875,
+    "test_weighted_f1": 0.9875,
+    "test_macro_precision": 0.9877,
+    "test_macro_recall": 0.9875,
+    "per_class": {
+      "Low": {
+        "precision": 0.9865,
+        "recall": 0.9865,
+        "f1": 0.9865,
+        "support": 74
+      },
+      "Medium": {
+        "precision": 0.9765,
+        "recall": 0.9881,
+        "f1": 0.9822,
+        "support": 84
+      },
+      "High": {
+        "precision": 1.0,
+        "recall": 0.9878,
+        "f1": 0.9939,
+        "support": 82
+      }
+    },
+    "confusion_matrix": [
+      [
+        73,
+        1,
+        0
+      ],
+      [
+        1,
+        83,
+        0
+      ],
+      [
+        0,
+        1,
+        81
+      ]
+    ]
+  },
+  "Logistic Regression": {
+    "cv_accuracy_mean": 0.975,
+    "cv_accuracy_std": 0.0141,
+    "cv_macro_f1_mean": 0.9752,
+    "cv_macro_f1_std": 0.0141,
+    "test_agreement_accuracy": 0.9875,
+    "test_macro_f1": 0.9875,
+    "test_weighted_f1": 0.9875,
+    "test_macro_precision": 0.9877,
+    "test_macro_recall": 0.9875,
+    "per_class": {
+      "Low": {
+        "precision": 0.9865,
+        "recall": 0.9865,
+        "f1": 0.9865,
+        "support": 74
+      },
+      "Medium": {
+        "precision": 0.9765,
+        "recall": 0.9881,
+        "f1": 0.9822,
+        "support": 84
+      },
+      "High": {
+        "precision": 1.0,
+        "recall": 0.9878,
+        "f1": 0.9939,
+        "support": 82
+      }
+    },
+    "confusion_matrix": [
+      [
+        73,
+        1,
+        0
+      ],
+      [
+        1,
+        83,
+        0
+      ],
+      [
+        0,
+        1,
+        81
+      ]
+    ]
+  },
+  "Decision Tree": {
+    "cv_accuracy_mean": 0.9542,
+    "cv_accuracy_std": 0.0232,
+    "cv_macro_f1_mean": 0.9541,
+    "cv_macro_f1_std": 0.0231,
+    "test_agreement_accuracy": 0.9542,
+    "test_macro_f1": 0.9543,
+    "test_weighted_f1": 0.9539,
+    "test_macro_precision": 0.9543,
+    "test_macro_recall": 0.9546,
+    "per_class": {
+      "Low": {
+        "precision": 0.9595,
+        "recall": 0.9595,
+        "f1": 0.9595,
+        "support": 74
+      },
+      "Medium": {
+        "precision": 0.9506,
+        "recall": 0.9167,
+        "f1": 0.9333,
+        "support": 84
+      },
+      "High": {
+        "precision": 0.9529,
+        "recall": 0.9878,
+        "f1": 0.9701,
+        "support": 82
+      }
+    },
+    "confusion_matrix": [
+      [
+        71,
+        3,
+        0
+      ],
+      [
+        3,
+        77,
+        4
+      ],
+      [
+        0,
+        1,
+        81
+      ]
+    ]
+  },
+  "Random Forest (Pre-tuning)": {
+    "cv_accuracy_mean": 0.9771,
+    "cv_accuracy_std": 0.0121,
+    "cv_macro_f1_mean": 0.9772,
+    "cv_macro_f1_std": 0.0121,
+    "test_agreement_accuracy": 0.9875,
+    "test_macro_f1": 0.9875,
+    "test_weighted_f1": 0.9875,
+    "test_macro_precision": 0.9877,
+    "test_macro_recall": 0.9875,
+    "per_class": {
+      "Low": {
+        "precision": 0.9865,
+        "recall": 0.9865,
+        "f1": 0.9865,
+        "support": 74
+      },
+      "Medium": {
+        "precision": 0.9765,
+        "recall": 0.9881,
+        "f1": 0.9822,
+        "support": 84
+      },
+      "High": {
+        "precision": 1.0,
+        "recall": 0.9878,
+        "f1": 0.9939,
+        "support": 82
+      }
+    },
+    "confusion_matrix": [
+      [
+        73,
+        1,
+        0
+      ],
+      [
+        1,
+        83,
+        0
+      ],
+      [
+        0,
+        1,
+        81
+      ]
+    ]
+  },
+  "Gradient Boosting": {
+    "cv_accuracy_mean": 0.9615,
+    "cv_accuracy_std": 0.0142,
+    "cv_macro_f1_mean": 0.9616,
+    "cv_macro_f1_std": 0.0142,
+    "test_agreement_accuracy": 0.975,
+    "test_macro_f1": 0.975,
+    "test_weighted_f1": 0.975,
+    "test_macro_precision": 0.975,
+    "test_macro_recall": 0.975,
+    "per_class": {
+      "Low": {
+        "precision": 0.973,
+        "recall": 0.973,
+        "f1": 0.973,
+        "support": 74
+      },
+      "Medium": {
+        "precision": 0.9643,
+        "recall": 0.9643,
+        "f1": 0.9643,
+        "support": 84
+      },
+      "High": {
+        "precision": 0.9878,
+        "recall": 0.9878,
+        "f1": 0.9878,
+        "support": 82
+      }
+    },
+    "confusion_matrix": [
+      [
+        72,
+        2,
+        0
+      ],
+      [
+        2,
+        81,
+        1
+      ],
+      [
+        0,
+        1,
+        81
+      ]
+    ]
+  },
+  "Random Forest (Tuned)": {
+    "best_hyperparameters": {
+      "max_depth": 4,
+      "min_samples_leaf": 1,
+      "n_estimators": 50
+    },
+    "best_cv_macro_f1": 0.9772,
+    "test_agreement_accuracy": 0.9875,
+    "test_macro_f1": 0.9875,
+    "confusion_matrix": [
+      [
+        73,
+        1,
+        0
+      ],
+      [
+        1,
+        83,
+        0
+      ],
+      [
+        0,
+        1,
+        81
+      ]
+    ]
+  },
+  "feature_importances": {
+    "gini": {
+      "damage_count": 0.126,
+      "pothole_count": 0.0394,
+      "alligator_crack_count": 0.0795,
+      "longitudinal_crack_count": 0.018,
+      "transverse_crack_count": 0.0172,
+      "total_bbox_area_ratio": 0.3118,
+      "largest_bbox_area_ratio": 0.4082
+    },
+    "permutation": {
+      "damage_count": 0.1535,
+      "pothole_count": 0.0013,
+      "alligator_crack_count": 0.0013,
+      "longitudinal_crack_count": 0.0,
+      "transverse_crack_count": 0.0,
+      "total_bbox_area_ratio": 0.0,
+      "largest_bbox_area_ratio": 0.2964
+    }
+  }
+}

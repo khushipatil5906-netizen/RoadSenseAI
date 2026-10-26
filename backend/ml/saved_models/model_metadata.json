@@ -1,0 +1,104 @@
+{
+  "model_name": "RoadSense Severity Random Forest Classifier (Tuned)",
+  "model_version": "v1.3.0-rf-tuned",
+  "algorithm": "RandomForestClassifier",
+  "dataset_source": "RDD2022 (Road Damage Detection Challenge 2022, Seki Lab / Figshare DOI: 10.6084/m9.figshare.21431547)",
+  "label_source": "Deterministic heuristic engineering rules based on defect counts and area ratios (proxy labels, not ground truth)",
+  "dataset_samples": {
+    "total": 1200,
+    "train": 960,
+    "test": 240
+  },
+  "feature_schema": [
+    "damage_count",
+    "pothole_count",
+    "alligator_crack_count",
+    "longitudinal_crack_count",
+    "transverse_crack_count",
+    "total_bbox_area_ratio",
+    "largest_bbox_area_ratio"
+  ],
+  "feature_importances": {
+    "largest_bbox_area_ratio": 0.4082,
+    "total_bbox_area_ratio": 0.3118,
+    "damage_count": 0.126,
+    "alligator_crack_count": 0.0795,
+    "pothole_count": 0.0394,
+    "longitudinal_crack_count": 0.018,
+    "transverse_crack_count": 0.0172
+  },
+  "supported_classes": [
+    "Low",
+    "Medium",
+    "High"
+  ],
+  "metrics": {
+    "accuracy": 0.9875,
+    "agreement_with_heuristic_labels": 0.9875,
+    "label_source": "Deterministic heuristic engineering rules based on defect counts and area ratios (proxy labels, not ground truth)",
+    "baseline_accuracy": 0.35,
+    "rule_only_baseline_accuracy": 0.9875,
+    "f1_macro": 0.9875,
+    "f1_weighted": 0.9875,
+    "precision_macro": 0.9877,
+    "recall_macro": 0.9875,
+    "per_class": {
+      "Low": {
+        "precision": 0.9865,
+        "recall": 0.9865,
+        "f1_score": 0.9865,
+        "support": 74
+      },
+      "Medium": {
+        "precision": 0.9765,
+        "recall": 0.9881,
+        "f1_score": 0.9822,
+        "support": 84
+      },
+      "High": {
+        "precision": 1.0,
+        "recall": 0.9878,
+        "f1_score": 0.9939,
+        "support": 82
+      }
+    },
+    "confusion_matrix": [
+      [
+        73,
+        1,
+        0
+      ],
+      [
+        1,
+        83,
+        0
+      ],
+      [
+        0,
+        1,
+        81
+      ]
+    ],
+    "confusion_matrix_labels": [
+      "Low",
+      "Medium",
+      "High"
+    ]
+  },
+  "model_artifact": "severity_rf_model.joblib",
+  "training_date": "2026-10-26T06:04:32.032849+00:00",
+  "last_validation_date": "2026-10-26T06:04:32.032849+00:00",
+  "validation_status": "VALIDATED_PROXY",
+  "hyperparameters": {
+    "max_depth": 4,
+    "min_samples_leaf": 1,
+    "n_estimators": 50
+  },
+  "limitations": [
+    "Proxy Labels: Severity classes are computed from deterministic heuristic rules, not certified civil engineering ground truth.",
+    "Injected Label Noise: Approximately 5% adjacent-border noise was injected during dataset preparation to simulate real-world rater hesitation.",
+    "Detector Not Field-Validated: Computer vision defect localization uses edge/morphological heuristics; localization IoU is not validated against certified human bounding boxes.",
+    "Dataset Subset: Model is trained on a 1,200-sample tabular representation derived from RDD2022 distributions rather than the full multi-national raw image dataset.",
+    "Decision Support Only: RoadSense outputs provide triage guidance to municipal engineers and must not replace on-site physical structural inspections."
+  ]
+}

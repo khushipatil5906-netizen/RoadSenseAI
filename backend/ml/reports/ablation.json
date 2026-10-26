@@ -1,0 +1,161 @@
+{
+  "baseline": {
+    "features_used": [
+      "damage_count",
+      "pothole_count",
+      "alligator_crack_count",
+      "longitudinal_crack_count",
+      "transverse_crack_count",
+      "total_bbox_area_ratio",
+      "largest_bbox_area_ratio"
+    ],
+    "feature_count": 7,
+    "agreement_accuracy": 0.9875,
+    "macro_f1": 0.9875
+  },
+  "individual_ablations": {
+    "damage_count": {
+      "removed_feature": "damage_count",
+      "remaining_features": [
+        "pothole_count",
+        "alligator_crack_count",
+        "longitudinal_crack_count",
+        "transverse_crack_count",
+        "total_bbox_area_ratio",
+        "largest_bbox_area_ratio"
+      ],
+      "agreement_accuracy": 0.9833,
+      "macro_f1": 0.9833,
+      "accuracy_drop": 0.0042,
+      "macro_f1_drop": 0.0042
+    },
+    "pothole_count": {
+      "removed_feature": "pothole_count",
+      "remaining_features": [
+        "damage_count",
+        "alligator_crack_count",
+        "longitudinal_crack_count",
+        "transverse_crack_count",
+        "total_bbox_area_ratio",
+        "largest_bbox_area_ratio"
+      ],
+      "agreement_accuracy": 0.9875,
+      "macro_f1": 0.9875,
+      "accuracy_drop": 0.0,
+      "macro_f1_drop": 0.0
+    },
+    "alligator_crack_count": {
+      "removed_feature": "alligator_crack_count",
+      "remaining_features": [
+        "damage_count",
+        "pothole_count",
+        "longitudinal_crack_count",
+        "transverse_crack_count",
+        "total_bbox_area_ratio",
+        "largest_bbox_area_ratio"
+      ],
+      "agreement_accuracy": 0.9833,
+      "macro_f1": 0.9833,
+      "accuracy_drop": 0.0042,
+      "macro_f1_drop": 0.0042
+    },
+    "longitudinal_crack_count": {
+      "removed_feature": "longitudinal_crack_count",
+      "remaining_features": [
+        "damage_count",
+        "pothole_count",
+        "alligator_crack_count",
+        "transverse_crack_count",
+        "total_bbox_area_ratio",
+        "largest_bbox_area_ratio"
+      ],
+      "agreement_accuracy": 0.9875,
+      "macro_f1": 0.9875,
+      "accuracy_drop": 0.0,
+      "macro_f1_drop": 0.0
+    },
+    "transverse_crack_count": {
+      "removed_feature": "transverse_crack_count",
+      "remaining_features": [
+        "damage_count",
+        "pothole_count",
+        "alligator_crack_count",
+        "longitudinal_crack_count",
+        "total_bbox_area_ratio",
+        "largest_bbox_area_ratio"
+      ],
+      "agreement_accuracy": 0.9833,
+      "macro_f1": 0.9833,
+      "accuracy_drop": 0.0042,
+      "macro_f1_drop": 0.0042
+    },
+    "total_bbox_area_ratio": {
+      "removed_feature": "total_bbox_area_ratio",
+      "remaining_features": [
+        "damage_count",
+        "pothole_count",
+        "alligator_crack_count",
+        "longitudinal_crack_count",
+        "transverse_crack_count",
+        "largest_bbox_area_ratio"
+      ],
+      "agreement_accuracy": 0.9875,
+      "macro_f1": 0.9875,
+      "accuracy_drop": 0.0,
+      "macro_f1_drop": 0.0
+    },
+    "largest_bbox_area_ratio": {
+      "removed_feature": "largest_bbox_area_ratio",
+      "remaining_features": [
+        "damage_count",
+        "pothole_count",
+        "alligator_crack_count",
+        "longitudinal_crack_count",
+        "transverse_crack_count",
+        "total_bbox_area_ratio"
+      ],
+      "agreement_accuracy": 0.9833,
+      "macro_f1": 0.9833,
+      "accuracy_drop": 0.0042,
+      "macro_f1_drop": 0.0042
+    }
+  },
+  "group_ablations": {
+    "counts_group": {
+      "removed_group": "counts_group",
+      "removed_features": [
+        "damage_count",
+        "pothole_count",
+        "alligator_crack_count",
+        "longitudinal_crack_count",
+        "transverse_crack_count"
+      ],
+      "remaining_features": [
+        "total_bbox_area_ratio",
+        "largest_bbox_area_ratio"
+      ],
+      "agreement_accuracy": 0.9792,
+      "macro_f1": 0.9791,
+      "accuracy_drop": 0.0083,
+      "macro_f1_drop": 0.0084
+    },
+    "area_ratios_group": {
+      "removed_group": "area_ratios_group",
+      "removed_features": [
+        "total_bbox_area_ratio",
+        "largest_bbox_area_ratio"
+      ],
+      "remaining_features": [
+        "damage_count",
+        "pothole_count",
+        "alligator_crack_count",
+        "longitudinal_crack_count",
+        "transverse_crack_count"
+      ],
+      "agreement_accuracy": 0.9875,
+      "macro_f1": 0.9875,
+      "accuracy_drop": 0.0,
+      "macro_f1_drop": 0.0
+    }
+  }
+}

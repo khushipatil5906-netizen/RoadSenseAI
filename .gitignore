@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+frontend/dist/
+
+# Virtual Environments
+backend_venv/
+v/
+.venv/
+venv/
+env/
+ENV/
+
+# Python Cache & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local Environment Variables & Secrets
+.env
+!.env.example
+
+# Large Archives & Zips
+*.zip
+*.tar.gz
+*.rar
+RoadSense_AI_Project.zip
+
+# IDE & OS Files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log

@@ -1,0 +1,29 @@
+{
+  "total_samples": 1200,
+  "train_samples": 960,
+  "test_samples": 240,
+  "class_distribution_total": {
+    "Medium": 423,
+    "High": 409,
+    "Low": 368
+  },
+  "class_distribution_train": {
+    "Medium": 339,
+    "High": 327,
+    "Low": 294
+  },
+  "class_distribution_test": {
+    "Medium": 84,
+    "High": 82,
+    "Low": 74
+  },
+  "feature_columns": [
+    "damage_count",
+    "pothole_count",
+    "alligator_crack_count",
+    "longitudinal_crack_count",
+    "transverse_crack_count",
+    "total_bbox_area_ratio",
+    "largest_bbox_area_ratio"
+  ]
+}

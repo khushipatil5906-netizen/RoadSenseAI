@@ -1,0 +1,86 @@
+{
+  "dataset_status": "full_rdd2022_raw_missing_locally",
+  "held_out_pairs_found": 0,
+  "available_sample_images": 4,
+  "train_serve_mismatch_analysis": {
+    "training_input_source": "Ground-truth Pascal VOC bounding box annotations from RDD2022 XML files.",
+    "serving_input_source": "image_detector.py classical edge & morphological heuristics run on uploaded RGB frames.",
+    "mismatch_implication": "Heuristic detector generates false-positive crack candidates on textured asphalt and may underestimate bounding box area, creating a feature distribution shift between training and live inference."
+  },
+  "benchmarks": {},
+  "smoke_test_on_available_samples": [
+    {
+      "image": "sample_alligator.jpg",
+      "detections_count": 6,
+      "detected_classes": [
+        "transverse_crack",
+        "transverse_crack",
+        "alligator_crack",
+        "longitudinal_crack",
+        "alligator_crack",
+        "alligator_crack"
+      ],
+      "features": {
+        "damage_count": 6,
+        "pothole_count": 0,
+        "alligator_crack_count": 3,
+        "longitudinal_crack_count": 1,
+        "transverse_crack_count": 2,
+        "total_bbox_area_ratio": 0.1664,
+        "largest_bbox_area_ratio": 0.0279
+      }
+    },
+    {
+      "image": "sample_longitudinal.jpg",
+      "detections_count": 2,
+      "detected_classes": [
+        "transverse_crack",
+        "transverse_crack"
+      ],
+      "features": {
+        "damage_count": 2,
+        "pothole_count": 0,
+        "alligator_crack_count": 0,
+        "longitudinal_crack_count": 0,
+        "transverse_crack_count": 2,
+        "total_bbox_area_ratio": 0.0555,
+        "largest_bbox_area_ratio": 0.0279
+      }
+    },
+    {
+      "image": "sample_pothole.jpg",
+      "detections_count": 2,
+      "detected_classes": [
+        "transverse_crack",
+        "transverse_crack"
+      ],
+      "features": {
+        "damage_count": 2,
+        "pothole_count": 0,
+        "alligator_crack_count": 0,
+        "longitudinal_crack_count": 0,
+        "transverse_crack_count": 2,
+        "total_bbox_area_ratio": 0.0555,
+        "largest_bbox_area_ratio": 0.0279
+      }
+    },
+    {
+      "image": "sample_transverse.jpg",
+      "detections_count": 2,
+      "detected_classes": [
+        "transverse_crack",
+        "transverse_crack"
+      ],
+      "features": {
+        "damage_count": 2,
+        "pothole_count": 0,
+        "alligator_crack_count": 0,
+        "longitudinal_crack_count": 0,
+        "transverse_crack_count": 2,
+        "total_bbox_area_ratio": 0.0555,
+        "largest_bbox_area_ratio": 0.0279
+      }
+    }
+  ],
+  "detector_reliability_summary": "The computer vision detector is a lightweight, edge/contour-based heuristic localized detector suited for CPU demonstration environments. Because training is conducted on tabular features derived from ground-truth Pascal VOC annotations, live serving incurs train/serve mismatch. Automated bounding boxes must be treated as provisional inspection suggestions."
+}
