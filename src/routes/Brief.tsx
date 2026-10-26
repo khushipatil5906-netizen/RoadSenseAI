@@ -1,5 +1,4 @@
 import { translate as translateUi, useLanguage } from '@/lib/i18n/index.ts'
-import { RoomPanel } from './brief/RoomPanel.tsx'
 import { HouseIdeaPreview } from './brief/HouseIdeaPreview.tsx'
 import { SelectionsBar } from './brief/SelectionsBar.tsx'
 import { useDeferredValue, useEffect, useMemo, useRef, useState, type CSSProperties } from 'react'
@@ -201,7 +200,7 @@ export function Brief() {
           </div>
         )}
 
-        <div className={cx("mt-10", [4,5,7].includes(step) && "grid items-start gap-6 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]")}><section className="order-2 min-w-0 lg:order-1">
+        <div className={cx("mt-10", step === 5 && "grid items-start gap-6 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]")}><section className="order-2 min-w-0 lg:order-1">
           <Body />
 
         <div className="mt-14 flex items-center justify-between border-t border-line pt-6">
@@ -225,7 +224,7 @@ export function Brief() {
             )}
           </Button>
         </div>
-        </section>{[4,5,7].includes(step) && <div className="order-1 sticky top-[calc(var(--brief-rail-height)+16px)] z-[5] self-start lg:order-2">{step === 5 ? <HouseIdeaPreview /> : <RoomPanel />}</div>}
+        </section>{step === 5 && <div className="order-1 sticky top-[calc(var(--brief-rail-height)+16px)] z-[5] self-start lg:order-2"><HouseIdeaPreview /></div>}
         </div>
       </div>
     </div>
